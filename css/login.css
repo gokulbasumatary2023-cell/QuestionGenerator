@@ -1,1 +1,24 @@
+body{
+    background:#0d6efd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Poppins,sans-serif;
+}
 
+.login-box{
+    background:#fff;
+    width:400px;
+    max-width:95%;
+    padding:35px;
+    border-radius:15px;
+}
+
+.login-box h2{
+    color:#0d6efd;
+}
+
+button{
+    border-radius:30px;
+}
