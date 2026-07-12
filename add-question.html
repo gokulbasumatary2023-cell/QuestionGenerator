@@ -1,123 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Add Question</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Question - QuestionGenerator</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body class="bg-light">
 
 <div class="container py-5">
 
-<h2 class="mb-4 text-center">Add New Question</h2>
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">➕ Add New Question</h3>
+        </div>
 
-<form id="questionForm">
+        <div class="card-body">
 
-<div class="row">
+            <form id="questionForm">
 
-<div class="col-md-4 mb-3">
-<label>Class</label>
-<select class="form-select" id="class">
-<option>Class I</option>
-<option>Class II</option>
-<option>Class III</option>
-<option>Class IV</option>
-<option>Class V</option>
-<option>Class VI</option>
-<option>Class VII</option>
-<option>Class VIII</option>
-<option>Class IX</option>
-<option>Class X</option>
-</select>
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Class</label>
+                        <select class="form-select" id="class" required>
+                            <option value="">Select Class</option>
+                            <option>Class I</option>
+                            <option>Class II</option>
+                            <option>Class III</option>
+                            <option>Class IV</option>
+                            <option>Class V</option>
+                            <option>Class VI</option>
+                            <option>Class VII</option>
+                            <option>Class VIII</option>
+                            <option>Class IX</option>
+                            <option>Class X</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter Subject" required>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Board</label>
+                        <select class="form-select" id="board">
+                            <option>CBSE</option>
+                            <option>SEBA</option>
+                            <option>ICSE</option>
+                            <option>NCERT</option>
+                            <option>State Board</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Chapter</label>
+                        <input type="text" class="form-control" id="chapter" placeholder="Chapter Name">
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label">Marks</label>
+                        <input type="number" class="form-control" id="marks" min="1">
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label">Difficulty</label>
+                        <select class="form-select" id="difficulty">
+                            <option>Easy</option>
+                            <option>Medium</option>
+                            <option>Hard</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">Question</label>
+                        <textarea class="form-control" id="question" rows="4" placeholder="Enter Question"></textarea>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Option A</label>
+                        <input type="text" class="form-control" id="optionA">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Option B</label>
+                        <input type="text" class="form-control" id="optionB">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Option C</label>
+                        <input type="text" class="form-control" id="optionC">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Option D</label>
+                        <input type="text" class="form-control" id="optionD">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Correct Answer</label>
+                        <select class="form-select" id="answer">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Question Image</label>
+                        <input type="file" class="form-control" id="image">
+                    </div>
+
+                    <div class="col-md-12 text-center mt-3">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            💾 Save Question
+                        </button>
+
+                        <button type="reset" class="btn btn-secondary btn-lg">
+                            🔄 Reset
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
 </div>
 
-<div class="col-md-4 mb-3">
-<label>Subject</label>
-<input type="text" class="form-control" placeholder="Subject">
-</div>
-
-<div class="col-md-4 mb-3">
-<label>Board</label>
-<select class="form-select">
-<option>CBSE</option>
-<option>SEBA</option>
-<option>ICSE</option>
-<option>State Board</option>
-</select>
-</div>
-
-<div class="col-md-6 mb-3">
-<label>Chapter</label>
-<input type="text" class="form-control">
-</div>
-
-<div class="col-md-3 mb-3">
-<label>Marks</label>
-<input type="number" class="form-control">
-</div>
-
-<div class="col-md-3 mb-3">
-<label>Difficulty</label>
-<select class="form-select">
-<option>Easy</option>
-<option>Medium</option>
-<option>Hard</option>
-</select>
-</div>
-
-<div class="col-12 mb-3">
-<label>Question</label>
-<textarea class="form-control" rows="4"></textarea>
-</div>
-
-<div class="col-md-6 mb-3">
-<label>Option A</label>
-<input class="form-control">
-</div>
-
-<div class="col-md-6 mb-3">
-<label>Option B</label>
-<input class="form-control">
-</div>
-
-<div class="col-md-6 mb-3">
-<label>Option C</label>
-<input class="form-control">
-</div>
-
-<div class="col-md-6 mb-3">
-<label>Option D</label>
-<input class="form-control">
-</div>
-
-<div class="col-md-6 mb-3">
-<label>Correct Answer</label>
-<select class="form-select">
-<option>A</option>
-<option>B</option>
-<option>C</option>
-<option>D</option>
-</select>
-</div>
-
-<div class="col-md-6 mb-3">
-<label>Upload Image</label>
-<input type="file" class="form-control">
-</div>
-
-<div class="col-12 text-center mt-4">
-<button class="btn btn-primary btn-lg">Save Question</button>
-</div>
-
-</div>
-
-</form>
-
-</div>
+<script type="module" src="js/questions.js"></script>
 
 </body>
 </html>
