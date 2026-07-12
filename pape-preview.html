@@ -75,6 +75,16 @@
 </div>
 
 <script type="module" src="js/paper-preview.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
+<script>
+document.getElementById("downloadPdf").addEventListener("click", function(){
+
+    const element = document.getElementById("paper");
+
+    html2pdf().from(element).save("QuestionPaper.pdf");
+
+});
+</script>
 </body>
 </html>
