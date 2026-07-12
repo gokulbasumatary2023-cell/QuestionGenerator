@@ -25,6 +25,8 @@ async function generatePaper() {
   );
 
   const snapshot = await getDocs(q);
+console.log("Questions Found:", snapshot.size);
+alert("Questions Found: " + snapshot.size);
 
   let html = "";
 
