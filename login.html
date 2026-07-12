@@ -28,19 +28,27 @@
 
             <div class="mb-3">
                 <label>Email</label>
-                <input type="email" class="form-control" placeholder="Enter Email">
-            </div>
+                <form id="loginForm">
 
-            <div class="mb-3">
-                <label>Password</label>
-                <input type="password" class="form-control" placeholder="Enter Password">
-            </div>
+<input
+id="email"
+type="email"
+class="form-control mb-3"
+placeholder="Email">
 
-            <button class="btn btn-primary w-100">
-                Login
-            </button>
+<input
+id="password"
+type="password"
+class="form-control mb-3"
+placeholder="Password">
 
-        </form>
+<button class="btn btn-primary w-100">
+Login
+</button>
+
+</form>
+
+<script type="module" src="js/auth.js"></script>
 
         <p class="text-center mt-3">
             QuestionGenerator © 2026
